@@ -1,4 +1,4 @@
-# Qiskit Classifier
+# Qclassifier
 
 A minimal **Variational Quantum Classifier (VQC)** built with [Qiskit](https://www.ibm.com/quantum/qiskit) and `qiskit-machine-learning`.  
 The project is intentionally kept simple so it can serve as a clean starting point for quantum ML experiments.
