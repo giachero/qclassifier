@@ -1,4 +1,4 @@
-# 🧬 Qiskit Classifier — Project Structure Guide
+# 🧬 qclassifier — Project Structure Guide
 
 > An educational walkthrough of a Variational Quantum Classifier (VQC) project built with Qiskit.  
 > This document explains **what each file does**, **why it exists**, and **how the pieces fit together**.
