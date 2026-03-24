@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=72", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "qiskit-classifier"
+version = "0.1.0"
+description = "A quantum machine learning classifier built with Qiskit"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Your Name", email = "your@email.com" }
+]
+keywords = ["quantum", "machine-learning", "qiskit", "classifier", "qml"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "qiskit>=2.3.1",
+    "qiskit-machine-learning>=0.9.0",
+    "qiskit-aer>=0.17.0",
+    "numpy>=2.1.0",
+    "scikit-learn>=1.6.0",
+    "matplotlib>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.0",
+    "mypy>=1.14.0",
+]
+notebooks = [
+    "jupyter>=1.1.0",
+    "ipywidgets>=8.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/qiskit-classifier"
+Repository = "https://github.com/yourusername/qiskit-classifier"
+Issues = "https://github.com/yourusername/qiskit-classifier/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=qiskit_classifier --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
